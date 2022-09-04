@@ -372,7 +372,7 @@ h6 {
   padding: 0;
 }
 
-#hero .carousel-container {
+/* #hero .carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,22 +381,37 @@ h6 {
   position: relative;
   height: 70vh;
   padding-top: 60px;
+} */
+
+#hero .content {
+  text-align: center;
+  padding-top: 150px;
+  height: 70vh;
 }
 
-#hero h2 {
-  color: #fff;
+#hero .content h2 {
+  text-transform: uppercase;
+  color: #3b61be;
   margin-bottom: 30px;
-  font-size: 48px;
+  font-size: 20px;
   font-weight: 700;
 }
 
-#hero p {
+#hero .content h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* #hero p {
   width: 80%;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
-}
+} */
 
 #hero .carousel-control-prev,
 #hero .carousel-control-next {
