@@ -21,44 +21,56 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-/* Back to top */
-
-.back-to-top {
+/* Chat Dengan Lara */
+a#chatButton {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 25px;
-  bottom: 25px;
-  z-index: 996;
-  border: 2px solid #3b61be;
-  width: 40px;
-  height: 40px;
+  bottom: 20px;
+  right: 30px;
+  z-index: 10;
+  background: #3b61be;
+  cursor: pointer;
+  padding: 11px 15px 5px 14px;
   border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
   transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+a#chatButton.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+a#chatButton i {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+a#chatButton::after {
+  visibility: hidden;
+  content: attr(tip);
+  position: absolute;
+  bottom: 5px;
+  right: 65px;
+  background: #3b61be;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  width: max-content;
+  border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
 
-.back-to-top i {
-  font-size: 28px;
-  color: #3b61be;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #3b61be;
-}
-
-.back-to-top i:hover {
-  color: #fff;
-  font-weight: 600;
-}
-
-.back-to-top.active {
+a#chatButton:hover::after {
   visibility: visible;
-  opacity: 1;
 }
 
 /* Disable AOS delay on mobile */
@@ -86,6 +98,10 @@ h6 {
 #header.header-scrolled {
   background: rgba(73, 184, 230, 0.9);
 }
+/* 
+#header .logo {
+  margin: auto 20px;
+} */
 
 #header .logo h1 {
   font-size: 28px;
@@ -129,7 +145,7 @@ h6 {
   position: relative;
 }
 
-.navbar a {
+.navbar ul li a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -148,13 +164,16 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar a:hover,
-.navbar .active,
-.navbar li:hover > a {
+.navbar .active {
   background: #fff;
   color: #3b61be;
   font-weight: 600;
 }
+
+/* .navbar a:hover,
+.navbar li:hover > a {
+  font-weight: 700;
+} */
 
 .navbar .dropdown ul {
   display: block;
